@@ -1,20 +1,15 @@
-Feature: Deck page
+@deck
+Feature:Deck Page settings
 
-  Background:
+  Background: login and navigate to Deck page
     Given the user is in Login page
-    And the user logs in with the  valid credentals
-    And the user navigates to "Deck" page
-  ​
-  @createBoard
-  Scenario: Creating new board
-    When the user click on the Create New Board
-    And enter the Board name as "deneme"
-    And click on the check icon
-    Then deneme should be in the boards list
-    And the acion page should show the statement " You have created a new board deneme"
-  ​
-  @deleteBoard
-  Scenario: Deleting new board
-    When the user click on delete tab in the action(...) in line with the deneme board
-    Then deneme board should be out of list
-    And the acion page should show the statement "You have deleted the board"
+    When the user logs in with the  valid credentals
+    Then the user navigates to "Deck" page
+
+  Scenario: Deck page assertion
+    Then the user should see the title as "Deck - Trycloud"
+
+
+
+
+

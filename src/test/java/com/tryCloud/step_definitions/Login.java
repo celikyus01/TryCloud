@@ -16,13 +16,13 @@ public class Login {
         Driver.get().get(ConfigurationReader.get("url"));
     }
 
-    @When("the user logs in with the  valid credentals")
-    public void the_user_logs_in_with_the_valid_credentals() {
+    @When("the user logs in with the  valid credentials")
+    public void the_user_logs_in_with_the_valid_credentials() {
         new LoginPage().login(ConfigurationReader.get("username"),ConfigurationReader.get("password"));
     }
 
-    @When("the user logs in with the  invalid credentals")
-    public void the_user_logs_in_with_the_invalid_credentals() {
+    @When("the user logs in with the  invalid credentials")
+    public void the_user_logs_in_with_the_invalid_credentials() {
         new LoginPage().login("invalid_username", "invalid_password");
     }
 
